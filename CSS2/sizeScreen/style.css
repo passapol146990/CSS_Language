@@ -1,0 +1,56 @@
+body{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding-top: 15rem;
+}
+h1{
+    display: none;
+}
+
+
+.btn a{
+    border-radius: 5px;
+    background: #fff;
+    color: #000
+}
+a{
+    padding: 5px 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+@media only screen and (max-width: 500px){
+    body{
+        background: #242524;
+    }
+    #smartphon h1{
+        display: block;
+    }
+}
+@media (min-width: 501px) and (max-width: 768px){
+    body{
+        background: #242524;
+    } 
+    #Ipads h1{
+        display: block;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px){
+    body{
+        background: #242524;
+    }
+    #normal h1{
+        display: block;;
+    }
+}
+@media (min-width: 1025px) and (max-width: 10000px) {
+    body{
+        background: #242524;
+    }
+    #TV h1{
+        display: block;;
+    }
+}

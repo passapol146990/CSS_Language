@@ -1,0 +1,39 @@
+fr จะแบ่งหน่อยเช่น
+grid-template-colume: 1fr 2fr 1fr;
+จะเป็น 1  2 1 ใน 4
+grid-template-column: repeat(3,1fr);
+จะเป็น 1  ใน 3
+
+gap กดหนดระยะห่าง
+grid-row-gap: 10px;
+grid-colum=n-gap: 10px;
+
+
+text-shadow: x y blur color;
+box-shadow: x y blur color;
+
+
+:root{
+    --color: #fff;
+}
+เรียกใช้ var()
+
+transform: translate(x,y) ตำแหน่ง
+transform: rotate(...deg) หมุน
+transform: scale(x,y) ขนาด
+transform: skew(x,y) เอียง
+
+
+อนิเมะชัน แบบเอามเม้าไปวาง 
+แบบเต็ม
+transition-property: สิ่งที่ต้องการเปลี่ยนเช่น 'background';
+transition-duration: 2s เวลาในการทำงาน
+transition-timing-function: ease-in-out; เลือกระบบ
+transition-delay: 2s ดีเลย์ก่อนทำงาน
+แบบย่อ
+transition: background 2s ease 3s;
+กำหนดแบบหลายตัว
+transition: background 2s, width 2s ease 3s;
+สรุปมันคือการสร้างตัวแปรก่อนเปลี่ยนอนิเมะชัน 
+สามารถใช้ transition: all 2s ease 3s; ได้
+

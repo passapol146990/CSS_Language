@@ -1,0 +1,150 @@
+.loader-wrapper{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loader{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    transition: 0.5s;
+    
+}
+/* 02 */
+.loader span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rotate-bg 3s ease infinite;
+    animation: rotate-box 3s ease infinite;
+}
+.loader:after{
+    content:"";
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: #242524;
+    border-radius: 5%;
+    animation: rotate-cox 3s ease infinite;
+}
+.loader span:nth-child(1){
+    filter: blur(10px);
+}
+.loader span:nth-child(2){
+    filter: blur(20px);
+}
+.loader span:nth-child(3){
+    filter: blur(15px);
+}
+.loader span:nth-child(4){
+    filter: blur(50px);
+}
+@keyframes rotate-cox{
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(-90deg);
+    }
+    35%{
+        transform: rotate(-90deg);
+    }
+    50%{
+        transform: rotate(-180deg);
+    }
+    60%{
+        transform: rotate(-180deg);
+    }
+    75%{
+        transform: rotate(-270deg);
+    }
+    85%{
+        transform: rotate(-270deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+ }
+ @keyframes rotate-box{
+    0%{
+        transform: rotate(0deg);
+        background-color:#FF3333;
+    }
+    10%{
+        transform: rotate(0deg);
+        background-color:#FF9933;
+        
+    }
+    25%{
+        transform: rotate(90deg);
+        background-color:#FFFF66;
+    }
+    35%{
+        transform: rotate(90deg);
+        background-color:#99FF33;
+    }
+    50%{
+        transform: rotate(180deg);
+        background-color:#33FF33;
+    }
+    60%{
+        transform: rotate(180deg);
+        background-color:#33FF99;
+    }
+    75%{
+        transform: rotate(270deg);
+        background-color:#33FFFF;
+    }
+    85%{
+        transform: rotate(270deg);
+        background-color:#3399FF;
+    }
+    100%{
+        transform: rotate(360deg);
+        background-color:#3333FF;
+    }
+ }
+ @-webkit-keyframes rotate-bg{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+ }
+ @-moz-keyframes rotate-bg{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+ }
+ @keyframse rotate-bg{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+ }

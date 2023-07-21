@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <div class="open-btn" onclick="openModal()">open Modal</div>
+    </div>
+    <div id="modal" class="hidden">
+        <div id="modalContent">
+            <div class="close-btn" onclick="closeModal()">Close</div>
+            <div style="display: flex; flex-flow: column;">
+                <form>
+                    <div style="margin-bottom: 10px;">
+                        <p>Username:</p>
+                        <input type="text">
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <p>Password:</p>
+                        <input type="text">
+                    </div>
+                </form>
+                <div style="display: flex;justify-content: center;">
+                    <div class="login-btn">Login</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openModal(){
+            var modal = document.getElementById("modal")
+            modal.classList.remove("hidden")
+        }
+        function closeModal() {
+            var modal = document.getElementById("modal")
+            modal.classList.add("hidden")
+        }
+    </script>
+</body>
+</html>

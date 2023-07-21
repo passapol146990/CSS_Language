@@ -1,0 +1,17 @@
+/* เลื่อนมาจากทางซ้าน */
+.slide-class{
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    height: 680px;
+    background: linear-gradient(90deg,#ff8001 0%,#ebeee4, #ff8001 98.86%);
+    -webkit-animation: progressBar 2s ease-in-out;
+    -webkit-animation-fill-mode: both;
+}
+@-webkit-keyframes progressBar {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}

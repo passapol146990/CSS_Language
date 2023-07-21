@@ -1,0 +1,42 @@
+body{
+    background: #000;
+}
+h1{
+    color: #fff;
+}
+.grid-aria{
+    height: 50vh;
+    width: auto;
+    display: grid;
+    background: orange;
+
+    /* grid-template-columns: 1fr 4fr;
+    grid-template-rows: 3fr 10fr 2fr; */
+    /* grid-template-areas: 
+    'a a' 
+    'd b' 
+    'c c'
+    ; */
+
+    grid-template: 
+    'a a' 3fr
+    'd b' 10fr
+    'c c' 2fr / 1fr 4fr
+    ;
+}
+.hearder{
+    background: blue;
+    grid-area: a;
+}
+.sidebar{
+    background: red;
+    grid-area: b;
+}
+.content{
+    background: #fff;
+    grid-area: c;
+}
+.footer{
+    background: green;
+    grid-area: d;
+}

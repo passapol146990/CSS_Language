@@ -1,0 +1,152 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #fafafa;
+        }
+        body{
+            justify-content: center;
+            align-items: center;
+        }
+        .dropdown{
+            position: relative;
+            margin-top: 100px;
+            width: 300px;
+            height: 50px;
+            left: 30%;
+        }
+        .dropdown::before{
+            content: '';
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            width: 8px;
+            z-index: 1;
+            height: 8px;
+            border: 2px solid #333;
+            border-top: 2px solid #fff;
+            border-right: 2px solid #fff;
+            transform: rotate(-45deg);
+            transition: 0.5s;
+            pointer-events: none;
+        }
+        .dropdown.active::before{
+            top: 22px;
+            transform: rotate(-225deg);
+        }
+        .dropdown input{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            background: #fff;
+            border: none;
+            outline: none;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            padding: 12px 20px;
+            border-radius: 10px;       
+        }
+        .dropdown .option{
+            position: absolute;
+            top: 70px;
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 32px 30px rgba(0,0,0,0.05);
+            border-radius: 5px;
+            overflow: hidden;
+            display: none;
+        }
+        .dropdown.active .option{
+            display: block;
+        }
+        .dropdown .option div{
+            padding: 12px 20px;
+            cursor: pointer;
+        }
+        .dropdown .option div:hover{
+            background: #62baea;
+            color: #fff;
+        }
+
+        .dropdown1{
+            margin-top: 5vh;
+            margin-left: 30vw;
+            height: 50px;
+            width: 300px;
+            box-shadow: 0 0px 3px rgba(0,0,0,0.5);
+            border-radius: 5px;
+        }
+        .dropdown1 p{
+            padding: 10px 1rem;
+            padding-top: 15px;
+            border-radius: 20px;
+            color: rgba(0,0,0,0.6);
+        }
+        .dropdown1::before{
+            content: '';
+            position: absolute;
+            top: 205px;
+            right: 190px;
+            width: 8px;
+            z-index: 1;
+            height: 8px;
+            border: 2px solid #333;
+            border-top: 2px solid #fff;
+            border-right: 2px solid #fff;
+            transform: rotate(-45deg);
+            transition: 0.5s;
+            pointer-events: none;
+        }
+        .dropdown1.active::before{
+            top: 22px;
+            transform: rotate(-225deg);
+        }
+        .dropdown-item{
+            margin-top: 9px;
+            box-shadow: 0 2px 3px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <input type="text" class="textBox" placeholder="Dropdown Menu" readonly>
+        <div class="option">
+            <div onclick="show('HTML')">HTML</div>
+            <div onclick="show('CSS')">CSS</div>
+            <div onclick="show('JavaScript')">JavaScript</div>
+            <div onclick="show('Flutter')">Flutter</div>
+            <div onclick="show('Drat')">Drat</div>
+        </div>
+    </div>
+    <div class="dropdown1">
+       <p>Menu</p>
+        <div class="dropdown-item">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, quis.</p>
+        </div>
+    </div>
+    <script>
+        function show(anything){
+            document.querySelector('.textBox').value = anything;
+        }
+
+        let dropdown = document.querySelector('.dropdown');
+        dropdown.onclick = function(){
+            dropdown.classList.toggle('active'); 
+        }
+        let dropdown1 = document.querySelector('.dropdown1');
+        dropdown.onclick = function(){
+            dropdown.classList.toggle('active'); 
+        }
+    </script>
+</body>
+</html>

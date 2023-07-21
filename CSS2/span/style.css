@@ -1,0 +1,30 @@
+body{
+    background: #242524;
+}
+*{
+    color: #fff;
+}
+.grid1{
+    background: #fff;
+    height: 50vh;
+    width: auto;
+
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    grid-template-rows: repeat(2,auto);
+    justify-content: space-around;
+}
+.grid1 .item{
+    background: orange;
+    height: auto;
+    width: 100px;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+.grid1 .item:first-child{
+    grid-row: 1/span 3;
+}
+.grid1 .item:last-child{
+    grid-column: 2/span 4;
+    width: auto;
+}

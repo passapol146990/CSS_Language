@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container{
+    height: 200px;
+    width: 100%;
+    background: yellow;
+    display: flex;
+
+
+    /* หน้าไปหลัง */
+    /* flex-direction: row; */
+
+
+    /* หลังไปหน้า */
+    /* flex-direction: row-reverse; */
+
+
+    /* ตั้ง */
+    /* flex-direction: column; */
+
+
+    /* ตั้งสลับ */
+    /* flex-direction: column-reverse; */
+
+    /* ######################################################################## */
+
+    /* ทำให้ที่เกินไปลงล่าง */
+    /* flex-wrap: wrap; */
+
+
+    /* ทำให้ที่เกินไปขึ้นบน */
+    /* flex-wrap: wrap-reverse; */
+}
+.box{
+    height: 150px;
+    width: 150px;
+    background: #fff;
+    margin: 10px;
+    border: 2px solid #000;
+    padding: 10px;
+}
